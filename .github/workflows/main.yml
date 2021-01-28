@@ -1,1 +1,14 @@
+name: basic-schulung-workflow
+on:
+  push:
+  workflow_dispatch:
 
+jobs:
+  build:
+    name: my first action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: Patrick
